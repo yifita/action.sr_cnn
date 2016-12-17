@@ -1,0 +1,38 @@
+# ignore caffe model file
+*.caffemodel
+
+# ignore matlab temproray file
+*.m~
+
+# ignore sublime workspace file
+*.sublime-*
+
+# ignore mat file
+*.mat
+
+# ignore log file
+*.log
+
+# ignore output/
+srcnn/output/
+
+# ignore /imdb/cache
+srcnn/imdb/cache
+
+# ignore startup.m
+srcnn/startup.m
+
+# ignore text files
+*.txt
+
+# ignore tex pdf
+thesis/*.pdf
+*.toc
+*.aux
+*.out
+*.bbl
+*.blg
+*.lof
+*.lot
+*.gz
+*.txss
