@@ -4,7 +4,7 @@
 ### Prerequisites ###
 
 #### Caffe
-- install caffe (based on [Xiong's fork](https://github.com/yjxiong/caffe), which supports cudnn5 and OpenMPI multiGPU). This caffe version contains `merge_batch` layer and exposed some protected caffe functions in the matlab interface to emulate `iter_size` in matlab.
+- clone and build caffe from [here](https://github.com/yifita/caffe). This caffe version contains `merge_batch` and `weighted_sum` layer. In addition it exposed some protected caffe functions in the matlab interface to emulate `iter_size` in matlab.
 - modify caffe_mex.m to the corresponding caffe matlab interface directory
 
 #### Optical Flow
@@ -31,6 +31,7 @@ An example of generated ucf_dataset.mat
 	| spatial      | [split1](https://polybox.ethz.ch/index.php/s/sw6XuddNvN0UsDb) [split2](https://polybox.ethz.ch/index.php/s/xOkENBiQ6ItPjkc) [split3](https://polybox.ethz.ch/index.php/s/HCSFWRmYdgeEECH) |
 	| flow      	 | [split1](https://polybox.ethz.ch/index.php/s/IXxAciMJ2eJE2U7) [split2](https://polybox.ethz.ch/index.php/s/5gNrgpKrwR35mMm) [split3](https://polybox.ethz.ch/index.php/s/Jk58PgHVbVrNfFl) |
 
+- the reported two-stream results in the paper are yielded from summing spatial and temporal classification scores using weight 1 : 3.
 - other models mentioned in the paper experiments can be provided if the demand is large.
 
 #### run ####
@@ -44,8 +45,6 @@ test_spatial('model_path', path_to_weights, 'split', 1)
 % test flow
 `test_flow('model_path', path_to_weights, 'split', 1)`
 ```
-
-As mentioned in the paper, 
 
 [ucf-101]: http://crcv.ucf.edu/data/UCF101.php
 [hmdb-51]: http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/
