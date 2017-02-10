@@ -4,14 +4,14 @@
 ### Prerequisites ###
 
 #### Caffe
-- clone and build caffe from [here](https://github.com/yifita/caffe). This caffe version contains `merge_batch` and `weighted_sum` layer. In addition it exposed some protected caffe functions in the matlab interface to emulate `iter_size` in matlab.
+- clone and build caffe from [here](https://github.com/yifita/caffe). This caffe version is based on Limin Wang's fork [[1]](#good_practice) contains `merge_batch` and `weighted_sum` layer. In addition it exposed some protected caffe functions in the matlab interface to emulate `iter_size` in matlab.
 - modify caffe_mex.m to the corresponding caffe matlab interface directory
 
 #### Optical Flow
 - extract optical flow with Limin's [flow extractor](https://github.com/wanglimin/dense_flow)
 
 #### Bounding Boxes
-- We extracted 118 objects' bounding boxes in all video frames using [Faster-RCNN][Faster-RCNN] (retraining is required) and obtained filtered bounding boxes taking consideration of temporal coherency and motion saliency.
+- We extracted 118 objects' bounding boxes in all video frames using [Faster-RCNN][Faster-RCNN] [[2]](#faster_rcnn) (retraining is required) and obtained filtered bounding boxes taking consideration of temporal coherency and motion saliency.
 - The extracted and processed bounding boxes for [ucf-101][ucf-101] can be downloaded [here](https://polybox.ethz.ch/index.php/s/fNPgASRZiaVYsrr). Place the downloaded mat files under `imdb/cache`.
 - If you wish to extract the bounding boxes yourself, you need to be able to run Ren Shaoqing's [Faster-RCNN][Faster-RCNN] (most codes are migrated into this repository with minor modifications and more comments)
 	- First generate raw object detection using `faster_rcnn_{dataset}.m` 
@@ -50,3 +50,8 @@ test_spatial('model_path', path_to_weights, 'split', 1)
 [hmdb-51]: http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/
 [jhmdb]: http://jhmdb.is.tue.mpg.de/
 [Faster-RCNN]: faster_rcnn_build
+
+---
+<a name="faster_rcnn"></a>*Ren, S., He, K., Girshick, R., & Sun, J. (2015). Faster r-cnn: Towards real-time object detection with region proposal networks. In Advances in neural information processing systems (pp. 91-99).*
+
+<a name="good_practice"></a>*Wang, L., Xiong, Y., Wang, Z., & Qiao, Y. (2015). Towards good practices for very deep two-stream convnets. arXiv preprint arXiv:1507.02159.*
