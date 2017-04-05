@@ -55,3 +55,18 @@ test_spatial('model_path', path_to_weights, 'split', 1)
 <a name="faster_rcnn"></a>*Ren, S., He, K., Girshick, R., & Sun, J. (2015). Faster r-cnn: Towards real-time object detection with region proposal networks. In Advances in neural information processing systems (pp. 91-99).*
 
 <a name="good_practice"></a>*Wang, L., Xiong, Y., Wang, Z., & Qiao, Y. (2015). Towards good practices for very deep two-stream convnets. arXiv preprint arXiv:1507.02159.*
+
+
+#### Citation ####
+Please cite the following if you find the code useful.
+```
+@inproceedings{wang2016two,
+  title={Two-Stream SR-CNNs for Action Recognition in Videos},
+  author={Wang, Yifan and Song, Jie and Wang, Limin and Van Gool, Luc and Hilliges, Otmar},
+  year={2016},
+  organization={BMVC}
+}
+```
+
+#### Contact ####
+`Yifan Wang: yifan.wang@student.ethz.ch `
