@@ -56,8 +56,8 @@ test_spatial('model_path', path_to_weights, 'split', 1)
 
 <a name="good_practice"></a>*Wang, L., Xiong, Y., Wang, Z., & Qiao, Y. (2015). Towards good practices for very deep two-stream convnets. arXiv preprint arXiv:1507.02159.*
 
-
-#### Citation ####
+--- 
+### Citation ###
 Please cite the following if you find the code useful.
 ```
 @inproceedings{wang2016two,
@@ -68,5 +68,5 @@ Please cite the following if you find the code useful.
 }
 ```
 
-#### Contact ####
+### Contact ###
 `Yifan Wang: yifan.wang@student.ethz.ch `
