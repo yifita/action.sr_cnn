@@ -69,4 +69,4 @@ Please cite the following if you find the code useful.
 ```
 
 ### Contact ###
-`Yifan Wang: yifan.wang@student.ethz.ch `
+`Yifan Wang: yifan.wang@inf.ethz.ch `
