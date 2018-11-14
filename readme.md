@@ -62,7 +62,7 @@ Please cite the following if you find the code useful.
 ```
 @inproceedings{wang2016two,
   title={Two-Stream SR-CNNs for Action Recognition in Videos},
-  author={Wang, Yifan and Song, Jie and Wang, Limin and Van Gool, Luc and Hilliges, Otmar},
+  author={Yifan, Wang and Song, Jie and Wang, Limin and Van Gool, Luc and Hilliges, Otmar},
   year={2016},
   organization={BMVC}
 }
